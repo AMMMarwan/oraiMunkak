@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakktábla</title>
+    <style>
+        .sakkTable{
+            border: 1px solid;
+            /*width: 400px;
+            height: 400px;
+            */
+        }
+        .trSakk:nth-child(odd) .tdSakk:nth-child(even),
+        .trSakk:nth-child(even) .tdSakk:nth-child(odd) {
+            background-color: black;
+            border: 1px solid;
+            width: 50px;
+            height: 50px;
+        }
+        .trSakk:nth-child(odd) .tdSakk:nth-child(odd),
+        .trSakk:nth-child(even) .tdSakk:nth-child(even) {
+            background-color: lightblue;
+            border: 1px solid;
+            width: 50px;
+            height: 50px;
+        }
+        th{
+            border: 1px solid;
+            width: 50px;
+            height: 50px;
+        }
+        .thFejen{
+            rotate: 180deg;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<!--table.sakkTable>(tr>th*4)(tr.trSakk>td.tdSakk*4)*4 -->
+<!--table.sakkTable>(tr>th*4)(tr.trSakk>td.tdSakk*4)*4(tr>th*4)*1 -->
+<!--table.sakkTable>(tr>th*4)(tr.trSakk>th*1td.tdSakk*4th)*4(tr>th*4)*1 -->
+<!--table.sakkTable>(tr>th*6)(tr.trSakk>th*1td.tdSakk*4th)*4(tr>th*6)*1 -->
+<!--table.sakkTable>(tr>th.thFejen*6)(tr.trSakk>th*1td.tdSakk*4th.thFejen*1)*4(tr>th*6)*1 -->
+<!--table.sakkTable>(tr>th.thFejen*10)(tr.trSakk>th*1td.tdSakk*8th.thFejen*1)*8(tr>th*10)*1 -->
+
+<table class="sakkTable">
+    <tr>
+        <th class="thFejen"></th>
+        <th class="thFejen">a</th>
+        <th class="thFejen">b</th>
+        <th class="thFejen">c</th>
+        <th class="thFejen">d</th>
+        <th class="thFejen">e</th>
+        <th class="thFejen">f</th>
+        <th class="thFejen">g</th>
+        <th class="thFejen">h</th>
+        <th class="thFejen"></th>
+    </tr>
+    <tr class="trSakk">
+        <th>1</th>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <th class="thFejen">8</th>
+    </tr>
+    <tr class="trSakk">
+        <th>2</th>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <th class="thFejen">7</th>
+    </tr>
+    <tr class="trSakk">
+        <th>3</th>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <th class="thFejen">6</th>
+    </tr>
+    <tr class="trSakk">
+        <th>4</th>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <th class="thFejen">5</th>
+    </tr>
+    <tr class="trSakk">
+        <th>5</th>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <th class="thFejen">4</th>
+    </tr>
+    <tr class="trSakk">
+        <th>6</th>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <th class="thFejen">3</th>
+    </tr>
+    <tr class="trSakk">
+        <th>7</th>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <th class="thFejen">2</th>
+    </tr>
+    <tr class="trSakk">
+        <th>8</th>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <td class="tdSakk"></td>
+        <th class="thFejen">1</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th>a</th>
+        <th>b</th>
+        <th>c</th>
+        <th>d</th>
+        <th>e</th>
+        <th>f</th>
+        <th>g</th>
+        <th>h</th>
+        <th></th>
+    </tr>
+</table>
+
+</body>
+</html>
