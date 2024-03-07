@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egér követés</title>
+    <script 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+        
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(this).on("click", function(e){
+                var x = e.pageX;
+                var y = e.pageY;
+                var kov = $("#kovet")
+                kov.css('position','absolute')
+                kov.css('left',x)
+                kov.css('top',y)
+
+            })})
+            $(this).on("mousemove", function(e){
+                var x = e.pageX;
+                var y = e.pageY;
+                var kov = $("#mozog")
+                kov.css('position','absolute')
+                kov.css('left',x)
+                kov.css('top',y)
+        })
+    </script>
+
+</head>
+<body>
+    <div id="kovet">Követő</div>
+    <div id="mozog">Mozog <img src="nyíl.png"></div>
+</body>
+</html>
