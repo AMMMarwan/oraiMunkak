@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egér</title>
+    <style>
+        div.doboz {
+            position: absolute;
+            left: 200px;
+            top: 200px;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function mozog() {
+            x = Math.floor(Math.random()*window.innerWidth
+            +1-100);
+            if (x<0){x=0}
+            y = Math.floor(Math.random()*window.innerHeight
+            +1-100);
+            if (y<0){y=0}
+            document.getElementById("doboz").style.left=
+            x+"px"
+            document.getElementById("doboz").style.top=
+            y+"px"
+            document.getElementById("xy").innerHTML="x="+x
+            +"<br>y="+y
+        }
+
+        document.getElementById("doboz").
+        addEventListener('click',function(e){
+            mozog()
+        })
+    </script>
+</head>
+<body>
+    <div id="xy">
+        x=<br>
+        y=
+    </div>
+    <div class="doboz" id="doboz">
+        
+    </div>
+    <button onclick="mozog()">Katt</button>
+</body>
+</html>
