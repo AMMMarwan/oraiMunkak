@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS+DIV</title>
+    <script>
+        function kattint(){
+            /* document.writeln("Hali!") */
+            document.getElementById("koszont").innerHTML = "Halihóóó"
+        }
+        function nev(){
+            aktNev = document.getElementById("neved").value;
+            document.getElementById("doboz").innerHTML = "Jó hogy látlak "+aktNev+
+            "<br>Szeretnél velem játszani?"+
+            "<br>"+
+            "<button onclick='igen()'>Igen</button>"+
+            "<button onclick='nem()'>Nem</button>";
+        }
+        function nem(){
+            document.writeln("Nagyon sajnálom!"+
+            "<br>"+
+            "Viszlát "+aktNev+"!")
+        }
+        function igen(){
+            document.writeln("Na akkor gyere Minecraft "+aktNev+"!")
+        }
+    </script>
+    <style>
+        .cim {
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            width: 400px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<p id="koszont">Szia!</p>
+<button onclick="kattint()">Katt ide!</button>
+<div id="doboz" class="cim">
+    Üdvözöllek az oldalamon!
+</div>
+<div>
+    Kérem a neved: <input id="neved">
+    <button onclick="nev()">OK</button>
+</div>    
+</body>
+</html>
